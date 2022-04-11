@@ -1,5 +1,7 @@
 package selenium_listboxstudy;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +20,7 @@ public class Listboxstudy {
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
 		WebElement dropdown = driver.findElement(By.xpath("//select[@name='dropdown-class-example']"));
-//		Actions a = new Actions(driver);
+	//	Actions a = new Actions(driver);
 //		a.moveToElement(dropdown).perform();
 		 JavascriptExecutor js = (JavascriptExecutor)driver;
 		 js.executeScript("arguments[0].scrollIntoView();",dropdown);
@@ -27,6 +29,8 @@ public class Listboxstudy {
 		 s.selectByIndex(0);Thread.sleep(2000);
 		 s.selectByValue("option2");Thread.sleep(2000);
 		 s.selectByVisibleText("Option3");Thread.sleep(2000);
+		List<WebElement> list = driver.findElements(By.tagName("*"));
+		System.out.println(list.size());
 		
 	}
 

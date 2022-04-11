@@ -2,8 +2,11 @@ package Baseclasses;
 
 
 import java.time.Duration;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Reporter;
 
@@ -16,6 +19,7 @@ public class Base {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
 		Reporter.log("browser launch success", true);
+		
 	}
 	
 	public void closeBrowser() {

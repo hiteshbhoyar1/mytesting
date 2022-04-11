@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="listener.testing">
+      <class name="kiteAppTestClasses.kiteAppUserNameValidationUsingPropertyFile">
         <methods>
-          <include name="c"/>
-          <include name="b"/>
+          <include name="closingBrowser"/>
+          <include name="validationOfUserID"/>
+          <include name="launchingBrowser"/>
+          <include name="loginToKiteApp"/>
+          <include name="logoutFromKiteApp"/>
         </methods>
-      </class> <!-- listener.testing -->
+      </class> <!-- kiteAppTestClasses.kiteAppUserNameValidationUsingPropertyFile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
